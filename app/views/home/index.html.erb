@@ -101,91 +101,63 @@
   <a class="control-btn fui-arrow-down" href="#"> </a>
 </section>
 
-<section class="content-23  v-center bg-midnight-blue">
-  <div id="welcome" class="hero-unit span7">
-    <h1>Membership Site</h1>
-    <h3>Learn to build a successful subscription site.</h3>
-  </div>
-  <div class="row span8 plans">
-    <div class="span2 well">
-      <div class="plan"><h2>Silver</h2></div>
-      <ul class="unstyled">
-        <li>One lesson a month</li>
-      </ul>
-      <h3>$9/month</h3>
-      <%= link_to 'Subscribe', new_user_registration_path(:plan => 'silver'), :class => 'btn btn-primary' %>
-    </div>
-    <div class="span2 well">
-      <div class="plan featured-plan"><h2>Gold</h2></div>
-      <ul class="unstyled">
-        <li>Ten lessons a month</li>
-      </ul>
-      <h3>$19/month</h3>
-      <%= link_to 'Subscribe', new_user_registration_path(:plan => 'gold'), :class => 'btn btn-primary' %>
-    </div>
-    <div class="span2 well">
-      <div class="plan"><h2>Platinum</h2></div>
-      <ul class="unstyled">
-        <li>Thirty lessons a month</li>
-      </ul>
-      <h3>$29/month</h3>
-      <%= link_to 'Subscribe', new_user_registration_path(:plan => 'platinum'), :class => 'btn btn-primary' %>
+<section class="content-8 bg-midnight-blue">
+  <div class="container"><br>
+      <div class="hero-unit">
+        <h1>Wählen Sie ihr Leistungspaket</h1><br>
+        <h3>Als Mitglied steht Ihnen gegen Bezahlung einer Monatsgebühr ein großes Portfolio an Leistungen zur Verfügung.</h3>
+      </div>
+    <div class="row">
+      <div class="span2 offset2 well">
+        <div class="plan"><h2>Silber</h2></div>
+        <ul class="unstyled">
+          <li>Sie erhalten einen monatlichen Newsletter mit Tipps bzw. Links zu für Sie sinnvollen Webpages zum Thema Sport, Prävention und Gesundheit.</li>
+        </ul>
+        <h4>Kostenlos</h4>
+        <%= link_to 'Auswählen', new_user_registration_path(:plan => 'silver'), :class => 'btn btn-primary' %>
+      </div>
+      <div class="span2 well">
+        <div class="plan featured-plan"><h2>Gold</h2></div>
+        <ul class="unstyled">
+          <li>Nutzung des NODA Präventionsmoduls, inkl. monatlicher detaillierter Auswertung zur präventiven Testung Ihres Gesundheits- und Fitnesszustandes.</li>
+        </ul>
+        <h4>&euro;3,00<span style="font-size: 0.7em"> /Monat</span></h4>
+        <%= link_to 'Auswählen', new_user_registration_path(:plan => 'gold'), :class => 'btn btn-primary' %>
+      </div>
+      <div class="span2 well">
+        <div class="plan"><h2>Platin</h2></div>
+        <ul class="unstyled">
+          <li>Nutzung des NODA Präventionsmoduls<br>
+            Exklusive Beratung zu Arzneimitteln und Gesundheitsfragen durch unser Fachpersonal.<br>
+            <%= link_to '...mehr Details' %>
+          </li>
+        </ul>
+        <h4>&euro;5,00<span style="font-size: 0.7em"> /Monat</span></h4>
+        <%= link_to 'Auswählen', new_user_registration_path(:plan => 'platinum'), :class => 'btn btn-primary' %>
+      </div>
+    </div><br>
+
     </div>
   </div>
 </section>
 
-
-<!-- content-11  -->
-<section class="content-11">
-  <div class="container">
-    <span>You have the design, you have the code</span>
-    <a class="btn btn-large btn-danger" href="#">TRY IT NOW</a>
-  </div>
-</section>
 
 <!-- Email Subscription  -->
-<section class="content-13 subscribe-form bg-silver">
+<section class="content-13 subscribe-form">
   <div class="container">
     <div class="row">
+      <h4 style="padding-left: 30px">Ja, ich möchte den kostenlosen Newsletter erhalten.<br></h4>
+
       <form>
         <div class="span8">
           <input type="text" placeholder="Email Adresse hier eingeben" spellcheck="false">
         </div>
         <div class="span4">
           <button class="btn btn-large btn-primary" type="submit">
-            Subscribe now
+            Absenden
           </button>
         </div>
       </form>
     </div>
   </div>
 </section>
-
-<!-- footer-3 -->
-<footer class="footer-3">
-  <div class="container">
-    <div class="row v-center">
-      <div class="span2">
-        <div class="span2">
-          <a class="brand" href="#">Gesund Jetzt</a>
-        </div>
-      </div>
-      <div class="span7">
-        <div class="span7">
-          <div class="additional-links">
-            Be sure to take a look to our <a href="#">Terms of Use</a> and <a href="#">Impressum</a>
-          </div>
-        </div>
-      </div>
-      <div class="span3">
-        <div class="span3">
-          <h6>New York, NY</h6>
-          62 West 55th Street, Suite 302<br>New York, NY, 10230
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-
-

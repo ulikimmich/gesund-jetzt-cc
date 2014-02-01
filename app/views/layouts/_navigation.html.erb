@@ -5,40 +5,39 @@
       <div class="navbar-inner">
         <button type="button" class="btn btn-navbar"> </button>
         <%= link_to "Gesund Jetzt", root_path, :class => 'brand' %>
+
         <div class="nav-collapse collapse pull-right">
           <ul class="nav">
             <li class="active"><%= link_to "Home", root_path %></li>
-            <li><a data-section="Service" href="#">Service</a></li>
+            <li><a data-section="Service" href="#">Unser Service</a></li>
             <li><a data-section="nodaIndex" href="#">NODA Index</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Leistungen</a></li>
           </ul>
           <form class="navbar-form pull-left">
 
               <% if user_signed_in? %>
 
-                    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete', :class => "btn bg-nephritis" %>
+                <div class="btn-group select select-block">
+                  <button class="btn dropdown-toggle clearfix btn-primary" data-toggle="dropdown">
+                   Mein Konto&nbsp;&nbsp;<span class="caret"></span>
+                  </button>
+                    <span class="dropdown-arrow dropdown-arrow-inverse"></span>
+                  <ul class="dropdown-menu dropdown-inverse" role="menu" style="overflow-y: auto; min-height: 70px;">
+                    <li rel="0"><%= link_to 'Einstellungen', edit_user_registration_path, :tabindex => "-1", :class => "pull-left" %></li>
+                    <% if current_user.has_role? :admin %>
+                        <li><%= link_to 'Admin', users_path, :tabindex => "-1", :class => "pull-left" %></li>
+                    <% end %>
+                    <li rel="1"><%= link_to 'Logout', destroy_user_session_path, :method =>'delete', :tabindex => "-1", :class => "pull-left" %></li>
+                  </ul>
+                </div>
 
               <% else %>
-
-                    <%= link_to 'Login', new_user_session_path, :class => "btn bg-nephritis" %>
-
+                    <%= link_to 'Login', new_user_session_path, :class => "btn btn-primary" %>
               <% end %>
-              <% if user_signed_in? %>
-
-                    <%= link_to 'Edit account', edit_user_registration_path %>
-
-                  <% if current_user.has_role? :admin %>
-
-                        <%= link_to 'Admin', users_path %>
-
-                  <% end %>
-              <% end %>
-
           </form>
         </div>
+
       </div>
     </div>
   </div>
 </header>
-
-
