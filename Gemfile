@@ -2,8 +2,11 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '3.2.13'
-gem 'pg', '0.15.1'
-gem 'rails_12factor', '0.0.2'
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
 
 group :test do
   gem 'sqlite3'
